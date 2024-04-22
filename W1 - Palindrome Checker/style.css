@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+
+    font-family: Migra;
+    color: #fff;
+    background-color: #0827F5;
+}
+
+::selection{
+    background: #fff;
+    color: #0827F5;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    /* width: 62vw; */
+    gap: 47px;
+
+    max-width: 1176px;
+}
+
+h1#title{
+    font-family: 'Migra Italic';
+    font-size: 100px;
+    font-weight: 200;
+    line-height: 138px;
+    letter-spacing: -4px;
+}
+
+p#description{
+    font-size: 53.375px;
+    font-weight: 200;
+    line-height: 77px;
+    letter-spacing: -1.5px;
+    word-spacing: 2px;
+}
+
+form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 47px;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+label, p#result, input, #check-btn{
+    font-family: 'Migra Italic';
+    font-weight: 200;
+    font-size: 30.375px;
+    line-height: 38px;
+    color: #fff;
+}
+
+input{
+    background: none;
+    border: 1px solid #fff;
+    border-left: 4.5px solid #fff;
+    width: 374px;
+    height: 45px;
+    padding-left: 5px;
+}
+
+input:focus{
+    outline: none;
+}
+
+#check-btn{
+    border: 1px solid #fff;
+    width: 174px;
+    height: 45px;
+    background: none;
+    cursor: pointer;
+}
+
+div#result{
+    font-size: 31.5px;
+}
+
+#check-btn:hover{
+    color: #0827F5;
+    background: #fff;
+}
+
+@media screen and (max-width: 1440px) {
+    main{
+        scale: 0.7;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    p#description{
+        max-width: 800px;
+        text-align: justify;
+        font-size: 44px;
+    }
+    h1#title{
+        font-size: 80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    main{
+        scale: 0.6;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    main{
+        scale: 0.48;
+    }
+}
