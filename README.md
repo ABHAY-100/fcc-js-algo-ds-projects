@@ -4,6 +4,6 @@ This repository, **fcc-js-algorithms-tasks**, contains the projects and tasks I 
 
 ---
 
-I am currently working on these projects to complete the FreeCodeCamp certification. Stay tuned for updates!
+I am currently working on this to complete the FreeCodeCamp certification. Stay tuned for updates!
 
 Happy coding! 😄
