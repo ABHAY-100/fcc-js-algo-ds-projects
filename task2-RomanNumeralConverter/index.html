@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roman Numeral Converter</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="flex items-center pl-[600px] h-screen w-full overflow-hidden bg-[url('https://tailwindui.com/img/beams-home@95.jpg')] bg-left-top scale-110">
-    <div id="container" class="w-[700px]">
-      <p class="mt-4 text-3xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Let's Romanize Your Digits!</p>
-      <p class="mt-4 text-base leading-7 text-slate-700">Hey there! Welcome to our Roman Numeral Converter! Pop your numbers in the box below, hit that button, and voilà! You'll be swimming in Roman numerals in no time. Let's turn those boring digits into ancient awesomeness together! 🎉</p>
-      <div id="input-field" class="w-full h-fit mt-8 gap-4 flex">
-        <input placeholder="Type your numbers here..." type="number" id="number" class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 ">
-        <button id="convert-btn" class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700">Go Roman!</button>
-      </div>
-    </div>
-    <!-- <div id="output-container" class="w-[450px]">
-      <h1 id="output" class="mt-4 text-3xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">It's IV!</h1>
-      <p class="mt-4 text-base leading-7 text-slate-700">Marvel at the elegance of Roman numerals! Your numbers have undergone a stunning transformation. Embrace this timeless style and explore the beauty of ancient Rome. Ready to Romanize more? Hit 'Go Back!'!</p>
-      <button id="convert-btn" class="inline-flex justify-center rounded-lg text-sm font-semibold mt-8 py-3 px-4 bg-slate-900 text-white hover:bg-slate-700">Go Back!</button>
-    </div> -->
 
-    <script src="script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Numeral Converter</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Hide the arrows in input of type number for browsers */
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    input[type="number"] {
+      appearance: textfield;
+    }
+  </style>
+</head>
+
+<body class="flex items-center justify-center h-screen w-full overflow-hidden bg-[url('https://tailwindui.com/img/beams-home@95.jpg')] scale-110">
+  <div id="input-container" class="w-[750px]">
+    <p class="mt-4 text-3xl font-extrabold w-[700px] leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]">Let's Romanize Your Digits!</p>
+    <p class="mt-4 text-base leading-7 w-[700px] text-slate-700">Hey there! Welcome to our Roman Numeral Converter! Pop your numbers in the box below, hit that button, and voilà! You'll be swimming in Roman numerals in no time. Let'sturn those boring digits into ancient awesomeness together! 🎉</p>
+    <form  class="w-full h-fit mt-8 gap-4 flex">
+      <input placeholder="Type your numbers here..." type="number" id="number" class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-white/0 text-slate-900 ring-1 ring-slate-900/10 hover:bg-white/25 hover:ring-slate-900/15 ">
+      <button id="convert-btn" class="inline-flex justify-center rounded-lg text-sm font-semibold py-3 px-4 bg-slate-900 text-white hover:bg-slate-700">Go Roman!</button>
+    </form>
+  </div>
+  <div id="output-container" class="w-[750px]" style="display: none;">
+    <p id="output" class="mt-4 text-3xl font-extrabold leading-none tracking-tight text-slate-900 sm:text-5xl sm:leading-[3.5rem]"></p>
+    <p class="mt-4 text-base leading-7 w-[650px] text-slate-700">Marvel at the elegance of Roman numerals! Your numbers have undergone a stunning transformation. Embrace this timeless style and explore the beauty of ancient Rome. Ready to Romanize more? Hit 'Go Back!'!</p>
+    <button id="go-back-btn" class="inline-flex justify-center rounded-lg text-sm font-semibold mt-8 py-3 px-4 bg-slate-900 text-white hover:bg-slate-700">Go Back!</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
