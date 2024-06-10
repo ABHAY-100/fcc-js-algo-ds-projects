@@ -71,4 +71,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         return romanNumber;
     }
+
+    window.addEventListener('popstate', function(event) {
+        outputContainer.style.display = 'none';
+        inputContainer.style.display = 'block';
+
+        number.value = '';
+        history.pushState({}, '', '/');
+    });
 })
