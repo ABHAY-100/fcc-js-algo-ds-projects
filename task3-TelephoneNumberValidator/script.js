@@ -5,10 +5,13 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const resultsDiv = document.getElementById("results-div")
 
     const validatePhoneNumber = phoneNumber => {
-        const pattern = /^(1\s?)?(\(\d{3}\)|\d{3})([\s.-]?)\d{3}([\s.-]?)\d{4}$/;
+        const countryCode = '^(1\\s?)?';
+        const areaCode = '(\\([0-9]{3}\\)|[0-9]{3})';
+        const spacesDashes = '[\\s\\-]?';
+        const pNumber = '[0-9]{3}[\\s\\-]?[0-9]{4}$';
+        const pattern = new RegExp(`${countryCode}${areaCode}${spacesDashes}${pNumber}`);
 
-        const cleanedNumber = phoneNumber.replace(/\D/g, '');
-        return pattern.test(cleanedNumber);
+        return pattern.test(phoneNumber);
     }
 
     const displayResults = check => {
