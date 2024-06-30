@@ -1,4 +1,4 @@
-# FCC JavaScript Algorithms Tasks
+# FCC's JS Algorithms and Data Structures
 
 This repository showcases my solutions to the projects required for completing the JavaScript Algorithms and Data Structures certification from freeCodeCamp. These projects demonstrate proficiency in fundamental programming concepts and problem-solving skills using JavaScript.
 
